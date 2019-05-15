@@ -1,12 +1,8 @@
 <template>
   <div>
-    <header id="header" class="mui-bar mui-bar-nav">
-
-      <h1 class="mui-title">{{title}}</h1>
-      <a class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
-    </header>
-    <section>
-      <div style="padding: 10px 10px;">
+    <Head :title="title" :leftShow="leftShow"></Head>
+    <section class="mui-content">
+      <!--<div style="padding: 10px 10px;">
         <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-primary">
         <span class="mui-control-item mui-active" @click.stop.prevent="complain">
           发起投诉
@@ -18,7 +14,7 @@
           投诉历史
         </span>
         </div>
-      </div>
+      </div>-->
       <router-view></router-view>
     </section>
   </div>
@@ -26,12 +22,17 @@
 </template>
 
 <script>
+  import Head from "@/components/Head"
   export default {
     name: "Complain",
     data(){
       return{
-        title:"投诉"
+        title:"投诉",
+        leftShow:true
       }
+    },
+    components:{
+      Head
     },
    methods:{
       complain(){
@@ -39,10 +40,10 @@
       },
      complainList(){
 
-       this.$router.push("/complain_list")
+       this.$router.push("/complain_status")
      }
    },
-    mounted() {
+    created() {
 
     }
   }

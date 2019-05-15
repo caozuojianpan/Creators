@@ -2,17 +2,24 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import mui from './lib/js/mui.js'
-Vue.prototype.mui= mui;
 import "./lib/css/mui.css"
 import App from './App'
 import router from './router'
+import store from './store/index'
+import axios from 'axios'
+import md5 from 'js-md5'
 
-Vue.config.productionTip = false
+Vue.prototype.mui= mui;
+Vue.prototype.$md5 = md5;
+Vue.prototype.$axios = axios;
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
