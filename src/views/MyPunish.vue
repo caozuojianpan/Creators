@@ -111,8 +111,11 @@
                     _this.page += 1;
                     _this.list = result.data.records;
 
+                 }else if(result.code == 1001){
+                _this.mui.toast('暂无数据')
+
                 } else {
-                    _this.mui.toast('网络错误')
+                _this.mui.toast('网络错误')
                 }
 
 
