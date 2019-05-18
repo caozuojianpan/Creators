@@ -1,23 +1,26 @@
 <template>
-  <div id="app">
-      <keep-alive include="MyReward">
-          <!-- 将缓存name为test-keep-alive的组件 -->
-          <router-view/>
-      </keep-alive>
 
-  </div>
+    <div id="app">
+        <router-view/>
+    </div>
+
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+    export default {
+        name: 'App'
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
 </style>

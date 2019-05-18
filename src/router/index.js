@@ -16,77 +16,82 @@ import ChangePhone from "../views/ChangePhone";
 import QRCode from "../views/QRCode";
 import MyReward from "../views/MyReward";
 import MyPunish from "../views/MyPunish";
+import Team_findInvited from '@/views/Team_findInvited'
+import Team_findInvitor from '@/views/Team_findInvitor'
+import Update from '@/views/Update'
+
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      redirect:'/login',
-      name: 'Index',
-      component: Index,
-      children:[
+    routes: [
         {
-          path:'/login',
-          name:'Login',
-          component:Login
+            path: '/',
+            redirect: '/login',
+            name: 'Index',
+            component: Index,
+            children: [
+                {
+                    path: '/login',
+                    name: 'Login',
+                    component: Login
+                },
+                {
+                    path: '/register',
+                    name: 'Register',
+                    component: Register
+                },
+
+            ]
         },
         {
-          path:'/register',
-          name:'Register',
-          component:Register
+            path: "/make_complain",
+            name: "MakeComplain",
+            component: MakeComplain
         },
-
-      ]
-    },
-    {
-      path:"/make_complain",
-      name:"MakeComplain",
-      component: MakeComplain
-    },
-    {
-      path:"/uploader",
-      name:"Uploader",
-      component: Uploader
-    },
-    {
-      path:"/user",
-      name:"User",
-      component:User
-    },
-    {
-      path:"/team",
-      name:"Team",
-      component:Team
-    },
-    {
-      path:"/audit",
-      name:"Audit",
-      component:Audit
-    },
-   /* {
-      path: '/complain',
-      name: 'Complain',
-      redirect:"/make_complain",
-      component: Complain,
-      children:[{
-        path:"/make_complain",
-        name:"MakeComplain",
-        component: MakeComplain
-      },
         {
-          path:"/complain_status",
-          name:"ComplainStatus",
-          component: ComplainStatus
+            path: "/uploader",
+            name: "Uploader",
+            component: Uploader
+        },
+        {
+            path: "/user",
+            name: "User",
+            component: User
+        },
+        {
+            path: "/team",
+            name: "Team",
+            component: Team
+        },
+        {
+            path: "/audit",
+            name: "Audit",
+            component: Audit
+        },
+        /* {
+           path: '/complain',
+           name: 'Complain',
+           redirect:"/make_complain",
+           component: Complain,
+           children:[{
+             path:"/make_complain",
+             name:"MakeComplain",
+             component: MakeComplain
+           },
+             {
+               path:"/complain_status",
+               name:"ComplainStatus",
+               component: ComplainStatus
 
-        },{
-          path:"/complain_history",
-          name:"ComplainHistory",
-          component: ComplainHistory
-
-        },]
+             },{
+               path:"/complain_history",
+               name:"ComplainHistory",
+               component: ComplainHistory
+     },]
     },*/
+
+
     {
       path:"/home",
       name:"Home",
@@ -122,5 +127,26 @@ export default new Router({
           name:'MyPunish',
           component:MyPunish
       }
+        ,{
+            path: "/complain_history",
+            name: "ComplainHistory",
+            component: ComplainHistory
+        }
+        ,{
+            path: "/team_findInvited",
+            name: "Team_findInvited",
+            component: Team_findInvited
+        }
+        ,{
+            path: "/team_findInvitor",
+            name: "Team_findInvitor",
+            component: Team_findInvitor
+        }
+        ,{
+            path: "/update",
+            name: "Update",
+            component: Update
+        }
   ]
+
 })
