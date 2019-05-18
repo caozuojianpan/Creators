@@ -55,8 +55,8 @@
           {name:"团队",url:"/team",icon:"mui-icon mui-icon-personadd"},
           {name:"审核",url:"/audit",icon:"mui-icon mui-icon-checkmarkempty"},
           {name:"投诉",url:"/make_complain",icon:"mui-icon mui-icon-compose"},
-          {name:"升级",url:"/home",icon:"mui-icon mui-icon-upload"},
-          {name:"投诉历史",url:"/home",icon:"mui-icon mui-icon-list"},
+          {name:"升级",url:"/update",icon:"mui-icon mui-icon-upload"},
+          {name:"投诉历史",url:"/complain_history",icon:"mui-icon mui-icon-list"},
 
         ]
       }
