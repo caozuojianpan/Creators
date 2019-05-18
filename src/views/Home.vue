@@ -8,19 +8,19 @@
           <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
           <div class="mui-slider-item mui-slider-item-duplicate">
             <a href="#">
-              <img src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
+              <img src="../../static/img/banner.png">
             </a>
           </div>
           <!-- 第一张 -->
           <div class="mui-slider-item">
             <a href="#">
-              <img src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
+              <img src="../../static/img/banner.png">
             </a>
           </div>
           <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
           <div class="mui-slider-item mui-slider-item-duplicate">
             <a href="#">
-              <img src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
+              <img src="../../static/img/banner.png">
             </a>
           </div>
         </div>
@@ -57,6 +57,7 @@
           {name:"投诉",url:"/make_complain",icon:"mui-icon mui-icon-compose"},
           {name:"升级",url:"/update",icon:"mui-icon mui-icon-upload"},
           {name:"投诉历史",url:"/complain_history",icon:"mui-icon mui-icon-list"},
+          {name:"消息",url:"/message",icon:"mui-icon mui-icon-chat"},
 
         ]
       }

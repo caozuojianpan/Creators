@@ -89,7 +89,7 @@
                     if (res.data.code == 1000) {
                         this.getSelectList()
                         this.mui.alert(res.data.msg+",请去我的消息查看审核人信息", "提示", "确认", function () {
-                            _this.$router.push("/")
+                            _this.$router.push("/message")
                         }, "div")
                     } else {
                         this.mui.alert(res.data.msg, "提示", "确认", null, "div")

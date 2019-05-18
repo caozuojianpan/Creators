@@ -19,6 +19,7 @@ import MyPunish from "../views/MyPunish";
 import Team_findInvited from '@/views/Team_findInvited'
 import Team_findInvitor from '@/views/Team_findInvitor'
 import Update from '@/views/Update'
+import Message from '@/views/Message'
 
 
 Vue.use(Router)
@@ -146,6 +147,11 @@ export default new Router({
             path: "/update",
             name: "Update",
             component: Update
+        }
+        ,{
+            path: "/message",
+            name: "Message",
+            component: Message
         }
   ]
 

@@ -2,7 +2,7 @@
     <div>
         <Head :title="title" :leftShow="leftShow"/>
         <div>
-            <img src="http://img4.imgtn.bdimg.com/it/u=388817830,1385629530&fm=26&gp=0.jpg"/>
+            <img src="../../static/img/banner.png"/>
         </div>
         <form class="mui-input-group">
             <div class="mui-input-row">
@@ -106,7 +106,7 @@
         margin-top: 46px;
         display: block;
         width: 100%;
-        height: 300px;
+        height: 250px;
     }
 
     .mui-input-group {
