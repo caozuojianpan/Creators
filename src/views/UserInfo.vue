@@ -19,7 +19,7 @@
                     <li class="mui-table-view-cell ">
                        <span style="display: block;height: 42px;line-height: 42px" href="javascript:;" class="mui-pull-left" >头像</span>
                         <a href="javascript:;" class="mui-navigate-right mui-pull-right">
-                        <img class="mui-media-object mui-pull-right " id="head-img" :src="userInfo.gravatar">
+                        <img class="mui-media-object mui-pull-right " id="head-img" :src="userInfo.gravatar" v-img-error="'../../static/img/head.png'">
                         </a>
                     </li>
                     <li class="mui-table-view-cell"  @click="changeAccount">

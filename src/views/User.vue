@@ -10,7 +10,7 @@
         <ul class="mui-table-view mui-table-view-chevron">
           <li class="mui-table-view-cell mui-media">
             <a class="mui-navigate-right" href="javascript:;" @click="goUserInfo" >
-              <img class="mui-media-object mui-pull-left head-img" id="head-img" :src="userInfo.gravatar">
+              <img class="mui-media-object mui-pull-left head-img" id="head-img" :src="userInfo.gravatar" v-img-error="'../../static/img/head.png'">
               <div class="mui-media-body">
                 创客高级用户
                 <p class="mui-ellipsis">账号:{{userInfo.username}}</p>
