@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <router-view/>
+      <keep-alive include="MyReward">
+          <!-- 将缓存name为test-keep-alive的组件 -->
+          <router-view/>
+      </keep-alive>
+
   </div>
 </template>
 

@@ -10,6 +10,12 @@ import Team from '@/views/Team'
 import Audit from '@/views/Audit'
 import Uploader from '@/components/Uploader'
 import ComplainHistory from '@/views/ComplainHistory'
+import UserInfo from "../views/UserInfo";
+import ChangeAccount from "../views/ChangeAccount";
+import ChangePhone from "../views/ChangePhone";
+import QRCode from "../views/QRCode";
+import MyReward from "../views/MyReward";
+import MyPunish from "../views/MyPunish";
 
 Vue.use(Router)
 
@@ -85,6 +91,36 @@ export default new Router({
       path:"/home",
       name:"Home",
       component:Home
-    }
+    },
+      {
+          path:'/userInfo',
+          name:'UserInfo',
+          component:UserInfo
+      },
+      {
+          path:'/changeAccount',
+          name:'ChangeAccount',
+          component:ChangeAccount
+      },
+      {
+          path:'/changePhone',
+          name:'ChangePhone',
+          component:ChangePhone
+      },
+      {
+          path:'/qrCode',
+          name:'QRCode',
+          component:QRCode
+      },
+      {
+          path:'/myReward',
+          name:'MyReward',
+          component:MyReward
+      },
+      {
+          path:'/myPunish',
+          name:'MyPunish',
+          component:MyPunish
+      }
   ]
 })
