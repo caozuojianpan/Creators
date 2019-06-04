@@ -62,7 +62,6 @@
                 var files = e.target.files;
                 var data = new FormData();
                 data.append('headpic', files[0]);
-                console.log(data);
                 axios({
                     url:'http://47.107.138.115:8081/Pyramid/user/updatehead.do',
                     method:'put',
@@ -115,13 +114,11 @@
             }).then(function (data) {
 
                 var result = data.data.data;
-                console.log(result)
                 _this.userInfo = {
                     gravatar:'http://47.107.138.115:8081/file/'+result.headpic,
                     username:result.username,
                     mobile:result.phone
                 }
-                console.log(_this.userInfo)
 
             })
 
@@ -136,7 +133,6 @@
                     token:token
                 })
             }).then(function (data) {
-              console.log(data.data.data.invitecode);
               _this.invitecode = data.data.data.invitecode
 
             })

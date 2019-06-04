@@ -126,10 +126,8 @@
               _this.imgList.push({
                 file
               });
-              console.log( _this.imgList);
             };
             image.src= file.src;
-            console.log(file.src)
           }
         }
       },

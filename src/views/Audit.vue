@@ -53,9 +53,7 @@
             },
             audit(index, flag) {
                 var _this = this;
-                console.log(index, flag)
                 _this.mui.confirm("您确认" + (flag === 1 ? "同意" : "拒绝") + "该请求吗", "提示", ['取消', "确认"], function (msg) {
-                    console.log(msg)
                     if (msg.index === 1) {
                         _this.mui.showLoading("正在加载...", "div");
                         _this.$axios({
@@ -72,7 +70,6 @@
                                 _this.mui.toast("加载失败")
                             }
                             _this.mui.hideLoading(null);
-                            console.log(res)
                         }).catch(err => {
                             _this.mui.hideLoading(null);
                             _this.mui.toast("加载失败")
@@ -84,7 +81,6 @@
         },
         created() {
             this.mui.showLoading("正在加载...", "div");
-            console.log(localStorage.getItem("token"))
             this.$axios({
                 method: 'POST',
                 url: 'http://47.107.138.115:8081/Pyramid/user/level/checklist.do',
@@ -102,7 +98,6 @@
                     this.mui.toast("加载失败")
                 }
                 this.mui.hideLoading(null);
-                console.log(res)
             }).catch(err => {
                 this.mui.hideLoading(null);
                 this.mui.toast("加载失败")

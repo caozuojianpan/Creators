@@ -36,7 +36,6 @@
                 var canvas = document.getElementById('canvas')
                 QRCode.toCanvas(canvas, this.code, function (error) {
                     if (error) console.error(error)
-                    console.log('QRCode success!');
                 })
             },
             back(){

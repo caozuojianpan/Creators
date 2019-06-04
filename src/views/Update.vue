@@ -51,7 +51,6 @@
                     },
                     data: qs.stringify(datas)
                 }).then(res => {
-                    console.log(res.data)
                     if (res.data.code == 1000) {
                         _this.isShow = true;
                         _this.list.push(...res.data.data);
@@ -73,7 +72,6 @@
                     this.mui.toast("请选择您要提升的级别")
                     return;
                 }
-                console.log(this.value)
                 this.$axios({
                     method: 'post',
                     url: 'http://47.107.138.115:8081/Pyramid/user/level/up.do',
@@ -85,7 +83,6 @@
                         "token": localStorage.getItem("token")
                     }
                 }).then(res => {
-                    console.log(res.data)
                     if (res.data.code == 1000) {
                         this.getSelectList()
                         this.mui.alert(res.data.msg+",请去我的消息查看审核人信息", "提示", "确认", function () {
@@ -113,13 +110,11 @@
                     "token": qs.stringify(localStorage.getItem("token"))
                 }
             }).then(res => {
-                console.log(res.data)
                 if (res.data.code == 1000) {
                 } else {
                 }
                 this.mui.alert(res.data.msg)
             }).catch(err => {
-                console.log(err)
             })
         },
         mounted() {

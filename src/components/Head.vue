@@ -16,7 +16,6 @@
     },
     methods:{
       back(){
-        console.log("aaaaaaaaaa")
         this.$router.go(-1)
       }
     }

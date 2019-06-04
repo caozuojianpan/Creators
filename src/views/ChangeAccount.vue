@@ -38,6 +38,7 @@
                 this.$router.push('/userInfo')
             },
             changeAccount(){
+                var _this =this;
                 var uPattern = /^[a-zA-Z]{6,16}$/;
                 if(!this.username){
                     this.mui.toast('用户名不能为空');
@@ -47,7 +48,6 @@
                     this.mui.toast('用户名格式不正确')
                     return  false
                 }
-                console.log({fUserBasic:{username:this.username},token:this.token})
                axios({
                    url:'http://47.107.138.115:8081/Pyramid/user/updateInfo.do',
                    method:'put',
@@ -59,7 +59,10 @@
                }).then(function (data) {
                    var code = data.data.code;
                    if(code == 1000){
-                       _this.mui.toast('修改成功')
+                       _this.mui.alert("用户名修改成功,请重新登录!", "提示", "确认", function () {
+                           localStorage.removeItem('token');
+                           _this.$router.push('/login')
+                       }, "div")
                    }else{
                        _this.mui.toast('网络繁忙请稍后重试')
                    }
@@ -72,7 +75,6 @@
         },
         mounted() {
             this.username = this.$route.query.username;
-            console.log(this.$route.query)
             var token = localStorage.getItem('token');
             if(!token){
                 this.$router.push('/login');

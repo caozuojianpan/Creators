@@ -11,6 +11,11 @@ import store from './store/index'
 import axios from 'axios'
 import md5 from 'js-md5'
 import './lib/js/rem'
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload,{
+    error:'../static/img/img-error.jpg'
+})
 
 Vue.prototype.mui= mui;
 Vue.prototype.$md5 = md5;

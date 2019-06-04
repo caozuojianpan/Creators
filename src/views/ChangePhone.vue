@@ -72,7 +72,6 @@
         },
         mounted() {
             this.mobile = this.$route.query.phone;
-            console.log(this.$route.query)
             var token = localStorage.getItem('token');
             if(!token){
                 this.$router.push('/login');

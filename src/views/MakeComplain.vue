@@ -70,7 +70,6 @@
                     } else {
                         this.mui.alert("您要投诉的人不存在", "提示", "确认", null, "div")
                     }
-                    console.log(res)
                 }).catch(err => {
                 })
             },
@@ -128,7 +127,6 @@
                     this.rid = "";
                     this.content = "";
                     this.imglist = [];
-                    console.log(res)
                 }).catch(err => {
                     this.mui.hideLoading(null);
                 })

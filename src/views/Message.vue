@@ -121,7 +121,6 @@ import Head from '@/components/Head'
 	        params:{token:localStorage.getItem("token"),type:1	}
 	    }).then((data)=>{
 	        this.records1 = data.data.data
-	        console.log(this.records1)
 	    })
 	    axios({
 	        method:'get',

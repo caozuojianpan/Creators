@@ -63,6 +63,8 @@
       }
     },
     methods:{
+        add(){
+        }
     },
     components:{
       Head

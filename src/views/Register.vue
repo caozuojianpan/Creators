@@ -76,7 +76,6 @@
                             username: this.username
                         }
                     }).then(response => {
-                        console.log(response);
                         this.mui.hideLoading(null);
                         switch (response.data.code) {
                             case 1001:

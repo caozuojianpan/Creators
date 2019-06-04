@@ -93,15 +93,19 @@
             logout() {
                 var _this = this;
                 _this.mui.confirm("您确认退出登录吗?", "提示", ['取消', "确认"], function (msg) {
-                    axios({
-                        url: 'http://47.107.138.115:8081/Pyramid/user/userexit.do',
-                        method: 'get',
-                    }).then(function (data) {
-                        if (data.status) {
-                            localStorage.removeItem('token');
-                            _this.$router.push('/login')
-                        }
-                    })
+                    console.log(msg)
+                    if (msg.index===1){
+                        axios({
+                            url: 'http://47.107.138.115:8081/Pyramid/user/userexit.do',
+                            method: 'get',
+                        }).then(function (data) {
+                            if (data.status) {
+                                localStorage.removeItem('token');
+                                _this.$router.push('/login')
+                            }
+                        })
+                    }
+
                 }, "div");
 
             }
@@ -123,12 +127,10 @@
             }).then(function (data) {
 
                 var result = data.data.data;
-                console.log(result)
                 _this.userInfo = {
                     gravatar: 'http://47.107.138.115:8081/file/' + result.headpic,
                     username: result.username
                 }
-                console.log(_this.userInfo)
 
             })
         }

@@ -61,13 +61,10 @@
                         url: 'http://47.107.138.115:8081/Pyramid/user/login.do',
                         data: this.infos
                     }).then((res) => {
-                        console.log(res)
                         if (res.data.code == 1000) {
-                            console.log(res.data.data)
                             localStorage.setItem("token", res.data.data)
                             this.mui.toast('登录成功')
                             this.$router.push('/home')
-                            console.log(res)
 
                         } else {
                             this.mui.toast('账号或密码错误，请重试！')
